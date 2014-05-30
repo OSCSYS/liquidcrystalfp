@@ -2,7 +2,7 @@
 #define LiquidCrystalFP_h
 
 #include <inttypes.h>
-#include "Print.h"
+#include <Print.h>
 
 #include <pin.h>
 
@@ -81,7 +81,7 @@ public:
 
   void createChar(uint8_t, uint8_t[]);
   void setCursor(uint8_t, uint8_t); 
-  virtual void write(uint8_t);
+  virtual size_t write(uint8_t);
   void command(uint8_t);
 private:
   void send(uint8_t, uint8_t);
